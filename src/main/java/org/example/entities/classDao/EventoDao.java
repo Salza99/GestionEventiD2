@@ -1,4 +1,6 @@
-package org.example.entities;
+package org.example.entities.classDao;
+
+import org.example.entities.Evento;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;

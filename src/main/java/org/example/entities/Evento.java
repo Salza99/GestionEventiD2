@@ -1,5 +1,7 @@
 package org.example.entities;
 
+import org.example.entities.enumeratori.Type;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 
@@ -7,9 +9,10 @@ import java.time.LocalDate;
 @Table(name = "evento")
 public class Evento {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String titolo;
+    private String descrizione;
     @Column(name = "data_evento")
     private LocalDate dataEvento;
     @Column(name = "tipo_evento")
@@ -24,8 +27,9 @@ public class Evento {
     public Evento() {
     }
 
-    public Evento(String titolo, LocalDate dataEvento, Type tipoEvento, Integer numeroMassimoPartecipanti) {
+    public Evento(String titolo, String descrizione, LocalDate dataEvento, Type tipoEvento, Integer numeroMassimoPartecipanti) {
         this.titolo = titolo;
+        this.descrizione= descrizione;
         this.dataEvento = dataEvento;
         this.tipoEvento = tipoEvento;
         this.numeroMassimoPartecipanti = numeroMassimoPartecipanti;
@@ -39,6 +43,14 @@ public class Evento {
 
     public void setTitolo(String titolo) {
         this.titolo = titolo;
+    }
+
+    public String getDescrizione() {
+        return descrizione;
+    }
+
+    public void setDescrizione(String descrizione) {
+        this.descrizione = descrizione;
     }
 
     public LocalDate getDataEvento() {
