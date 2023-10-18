@@ -23,8 +23,7 @@ public class Evento {
     private Integer numeroMassimoPartecipanti;
     @OneToMany(mappedBy = "evento")
     private Set<Partecipazione> partecipazioni;
-    @ManyToOne()
-    @JoinColumn(name = "location_id", nullable = false)
+    @OneToOne()
     private Location location;
 
     //costruttori

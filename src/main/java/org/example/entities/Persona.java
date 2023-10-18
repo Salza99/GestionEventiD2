@@ -20,7 +20,7 @@ public class Persona {
     @Column(length = 1)
     private String sesso;
     @OneToMany(mappedBy = "persona")
-    @Column(name = "lista_partecipazioni")
+    @OrderBy("id ASC")
     private List<Partecipazione> listaPartecipazioni;
 
 

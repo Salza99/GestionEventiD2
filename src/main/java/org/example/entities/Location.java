@@ -11,8 +11,8 @@ public class Location {
     private String nome;
     @Column(name = "città")
     private String citta;
-    @OneToMany(mappedBy = "location")
-    private List<Evento> evento;
+    @OneToOne(mappedBy = "location")
+    private Evento evento;
 
     //Costruttori
 
@@ -42,11 +42,11 @@ public class Location {
         this.citta = citta;
     }
 
-    public List<Evento> getEvento() {
+    public Evento getEvento() {
         return evento;
     }
 
-    public void setEvento(List<Evento> evento) {
+    public void setEvento(Evento evento) {
         this.evento = evento;
     }
 

@@ -2,17 +2,21 @@ package org.example;
 
 import org.example.entities.Evento;
 import org.example.entities.Location;
+import org.example.entities.Partecipazione;
 import org.example.entities.Persona;
 import org.example.entities.classDao.EventoDao;
 import org.example.entities.classDao.LocationDao;
 import org.example.entities.classDao.PartecipazioneDao;
 import org.example.entities.classDao.PersonaDao;
+import org.example.entities.enumeratori.Stato;
 import org.example.entities.enumeratori.Type;
 import org.example.utils.JpaUtil;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import java.time.LocalDate;
+import java.util.List;
+import java.util.Set;
 
 public class Application {
 
@@ -38,22 +42,54 @@ public class Application {
         ld.saveNewLoc(bL);*/
         //Aggiungo degli eventi
         try {
-            Location foundA = ld.searchById(1);
-            Location foundB = ld.searchById(2);
-            System.out.println(foundA);
-            System.out.println(foundB);
-            if (foundA != null) {
-                Evento aE = new Evento("Opera", "Lirica a teatro", LocalDate.of(2023, 9, 21), Type.PUBBLICO, 500, foundA);
-                ed.saveNewEvent(aE);
+            Location foundlA = ld.searchById(1);
+            Location foundlB = ld.searchById(2);
+            
+            if (foundlA != null) {
+                //Evento aE = new Evento("Opera", "Lirica a teatro", LocalDate.of(2023, 9, 21), Type.PUBBLICO, 500, foundlA);
+                //ed.saveNewEvent(aE);
             }else {
                 System.out.println("location non trovata");
             }
-            if (foundB != null) {
-                Evento bE = new Evento("Opera", "Spettacolo comico", LocalDate.of(2023, 10, 1), Type.PUBBLICO, 400, foundB);
-                ed.saveNewEvent(bE);
+            if (foundlB != null) {
+                //Evento bE = new Evento("Opera", "Spettacolo comico", LocalDate.of(2023, 10, 1), Type.PUBBLICO, 400, foundB);
+                //ed.saveNewEvent(bE);
             }
+            //Aggiungo infine le partecipazioni
 
+            //trovo persone
+            Persona foundpA = ped.searchById(1);
+            Persona foundpB = ped.searchById(2);
+            Persona foundpC = ped.searchById(3);
+            //trovo eventi
+            /*Evento foundeA = ed.searchById(1);
+            Evento foundeB = ed.searchById(2);
 
+            Partecipazione aP = new Partecipazione(foundpA, foundeA, Stato.CONFERMATO);
+            Partecipazione bP = new Partecipazione(foundpA, foundeB, Stato.DA_CONFERMARE);
+            Partecipazione cP = new Partecipazione(foundpB, foundeA, Stato.DA_CONFERMARE);
+            Partecipazione dP = new Partecipazione(foundpB, foundeB, Stato.DA_CONFERMARE);
+            Partecipazione eP = new Partecipazione(foundpC, foundeB, Stato.CONFERMATO);
+            Partecipazione fP = new Partecipazione(foundpC, foundeA, Stato.CONFERMATO);
+
+            pd.saveNewPartecipation(aP);
+            pd.saveNewPartecipation(bP);
+            pd.saveNewPartecipation(cP);
+            pd.saveNewPartecipation(dP);
+            pd.saveNewPartecipation(eP);
+            pd.saveNewPartecipation(fP);*/
+            List<Partecipazione> setPartA = foundpA.getListaPartecipazioni();
+            System.out.println("lista partecipazioni utente " + foundpA.getNome());
+            setPartA.forEach(System.out::println);
+            List<Partecipazione> setPartB = foundpB.getListaPartecipazioni();
+            System.out.println("-------------*--------------");
+            System.out.println("lista partecipazioni utente " + foundpB.getNome());
+            setPartB.forEach(System.out::println);
+            System.out.println("-------------*--------------");
+            List<Partecipazione> setPartC = foundpC.getListaPartecipazioni();
+            System.out.println("lista partecipazioni utente " + foundpC.getNome());
+            setPartC.forEach(System.out::println);
+            System.out.println("-------------*--------------");
         }catch (Exception ex) {
             System.out.println(ex.getMessage());
         }finally {
