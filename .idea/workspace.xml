@@ -10,7 +10,6 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/Evento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/Evento.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/Location.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/Partecipazione.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/Partecipazione.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/Persona.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/classDao/LocationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/classDao/LocationDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/classDao/PartecipazioneDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/classDao/PartecipazioneDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/classDao/PersonaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/classDao/PersonaDao.java" afterDir="false" />

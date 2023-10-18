@@ -56,7 +56,6 @@ public class Location {
                 "id=" + id +
                 ", nome='" + nome + '\'' +
                 ", citta='" + citta + '\'' +
-                ", evento=" + evento +
                 '}';
     }
 }

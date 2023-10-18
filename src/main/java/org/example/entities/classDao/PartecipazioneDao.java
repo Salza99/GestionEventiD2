@@ -14,7 +14,7 @@ public class PartecipazioneDao {
         this.em = em;
     }
 
-    public void saveNewEvent(Partecipazione p) {
+    public void saveNewPartecipation(Partecipazione p) {
         EntityTransaction transaction = em.getTransaction();
         transaction.begin();
         em.persist(p);

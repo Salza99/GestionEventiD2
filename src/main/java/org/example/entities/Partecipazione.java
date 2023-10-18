@@ -57,8 +57,6 @@ public class Partecipazione {
     public String toString() {
         return "Partecipazione{" +
                 "id=" + id +
-                ", persona=" + persona +
-                ", evento=" + evento +
                 ", stato=" + stato +
                 '}';
     }

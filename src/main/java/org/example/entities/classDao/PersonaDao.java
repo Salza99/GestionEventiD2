@@ -14,7 +14,7 @@ public class PersonaDao {
         this.em = em;
     }
 
-    public void saveNewEvent(Persona p) {
+    public void saveNewPerson(Persona p) {
         EntityTransaction transaction = em.getTransaction();
         transaction.begin();
         em.persist(p);

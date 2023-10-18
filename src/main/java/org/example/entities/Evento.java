@@ -32,12 +32,13 @@ public class Evento {
     public Evento() {
     }
 
-    public Evento(String titolo, String descrizione, LocalDate dataEvento, Type tipoEvento, Integer numeroMassimoPartecipanti) {
+    public Evento(String titolo, String descrizione, LocalDate dataEvento, Type tipoEvento, Integer numeroMassimoPartecipanti, Location location) {
         this.titolo = titolo;
         this.descrizione= descrizione;
         this.dataEvento = dataEvento;
         this.tipoEvento = tipoEvento;
         this.numeroMassimoPartecipanti = numeroMassimoPartecipanti;
+        this.location = location;
     }
 
     //getter e setter

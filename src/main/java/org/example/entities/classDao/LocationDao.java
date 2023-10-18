@@ -15,7 +15,7 @@ public class LocationDao {
         this.em = em;
     }
 
-    public void saveNewEvent(Location l) {
+    public void saveNewLoc(Location l) {
         EntityTransaction transaction = em.getTransaction();
         transaction.begin();
         em.persist(l);
