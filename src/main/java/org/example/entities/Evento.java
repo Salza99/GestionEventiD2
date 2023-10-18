@@ -4,6 +4,7 @@ import org.example.entities.enumeratori.Type;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.Set;
 
 @Entity
 @Table(name = "evento")
@@ -20,6 +21,10 @@ public class Evento {
     private Type tipoEvento;
     @Column(name = "numero_max_partecipanti")
     private Integer numeroMassimoPartecipanti;
+    @OneToMany(mappedBy = "evento")
+    private Set<Partecipazione> partecipazioni;
+    @ManyToOne()
+    private Location location;
 
     //costruttori
 
@@ -78,4 +83,17 @@ public class Evento {
     }
     //override
 
+    @Override
+    public String toString() {
+        return "Evento{" +
+                "id=" + id +
+                ", titolo='" + titolo + '\'' +
+                ", descrizione='" + descrizione + '\'' +
+                ", dataEvento=" + dataEvento +
+                ", tipoEvento=" + tipoEvento +
+                ", numeroMassimoPartecipanti=" + numeroMassimoPartecipanti +
+                ", partecipazioni=" + partecipazioni +
+                ", location=" + location +
+                '}';
+    }
 }

@@ -1,6 +1,7 @@
 package org.example.entities;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Location {
@@ -10,5 +11,52 @@ public class Location {
     private String nome;
     @Column(name = "città")
     private String citta;
+    @OneToMany(mappedBy = "location")
+    private List<Evento> evento;
 
+    //Costruttori
+
+    public Location() {
+    }
+
+    public Location(String nome, String citta) {
+        this.nome = nome;
+        this.citta = citta;
+    }
+
+    //getter setter
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCitta() {
+        return citta;
+    }
+
+    public void setCitta(String citta) {
+        this.citta = citta;
+    }
+
+    public List<Evento> getEvento() {
+        return evento;
+    }
+
+    public void setEvento(List<Evento> evento) {
+        this.evento = evento;
+    }
+
+    @Override
+    public String toString() {
+        return "Location{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", citta='" + citta + '\'' +
+                ", evento=" + evento +
+                '}';
+    }
 }

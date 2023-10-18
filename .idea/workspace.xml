@@ -5,19 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="091e066d-9647-4510-bd8b-30cbede98494" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/Location.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/Partecipazione.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/Persona.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/classDao/LocationDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/classDao/PartecipazioneDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/classDao/PersonaDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/enumeratori/Stato.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/Evento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/Evento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/EventoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/classDao/EventoDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/enumeratori/Type.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/Partecipazione.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/Partecipazione.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/Persona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/classDao/LocationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/classDao/LocationDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/classDao/PartecipazioneDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/classDao/PartecipazioneDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/classDao/PersonaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/classDao/PersonaDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
