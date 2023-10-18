@@ -10,7 +10,7 @@ import java.util.Set;
 @Table(name = "evento")
 public class Evento {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String titolo;
     private String descrizione;
@@ -24,6 +24,7 @@ public class Evento {
     @OneToMany(mappedBy = "evento")
     private Set<Partecipazione> partecipazioni;
     @ManyToOne()
+    @JoinColumn(name = "location_id", nullable = false)
     private Location location;
 
     //costruttori

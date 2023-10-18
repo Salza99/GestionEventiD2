@@ -42,10 +42,18 @@ public class Application {
             Location foundB = ld.searchById(2);
             System.out.println(foundA);
             System.out.println(foundB);
-            Evento aE = new Evento("Opera", "Lirica a teatro", LocalDate.of(2023, 9, 21), Type.PUBBLICO, 500, foundA);
-            Evento bE = new Evento("Opera", "Spettacolo comico", LocalDate.of(2023, 10, 1), Type.PUBBLICO, 400, foundB);
-            ed.saveNewEvent(aE);
-            ed.saveNewEvent(bE);
+            if (foundA != null) {
+                Evento aE = new Evento("Opera", "Lirica a teatro", LocalDate.of(2023, 9, 21), Type.PUBBLICO, 500, foundA);
+                ed.saveNewEvent(aE);
+            }else {
+                System.out.println("location non trovata");
+            }
+            if (foundB != null) {
+                Evento bE = new Evento("Opera", "Spettacolo comico", LocalDate.of(2023, 10, 1), Type.PUBBLICO, 400, foundB);
+                ed.saveNewEvent(bE);
+            }
+
+
         }catch (Exception ex) {
             System.out.println(ex.getMessage());
         }finally {
